@@ -1,0 +1,84 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>index</title>
+    </head>
+    <body>
+        <form method="POST" class= "post-form" action="/proceed/{{patient.id}}">
+            {%csrf_token%}
+        <label>First Name</label>
+                <div>
+                    <input type="text" name="Fname" id="id_Fname" value="{{patient.Fname}}">
+                </div>
+            </div>
+            <div class="post-form">
+                <label>Last Name</label>
+                <div>
+                    <input type="text" name="Lname" id="id_Lname" value="{{patient.Lname}}">
+                </div>
+            </div>
+            <div class="post-form">
+                <label>Age</label>
+                <div>
+                    <input type="text" name="Age" id="id_Age" value="{{patient.Age}}">
+                </div>
+            </div>
+            <div class="post-form">
+                <label>Sex</label>
+                <div>
+                    <input type="text" name="sex" id="id_sex" value="{{patient.sex}}">
+                </div>
+            </div>
+            <div class="post-form">
+                <label>Contact</label>
+                <div>
+                    <input type="text" name="Contact" id="id_Contact" value="{{patient.Contact}}">
+                </div>
+            </div>
+            <div class="post-form">
+                <label>Email</label>
+                <div>
+                    <input type="text" name="Email" id="id_Email" value="{{patient.Email}}">
+                </div>
+            </div>
+            <div class="post-form">
+                <label>Address</label>
+                <div>
+                    <input type="text" name="Address" id="id_Address" value="{{patient.Address}}">
+                </div>
+            </div>
+            <div class="post-form">
+                <label>City</label>
+                <div>
+                    <input type="text" name="city" id="id_city" value="{{patient.city}}">
+                </div>
+            </div>
+            <div class="post-form">
+                <label>State</label>
+                <div>
+                    <input type="text" name="state" id="id_state" value="{{patient.state}}">
+                </div>
+            </div>
+            <div class="post-form">
+                <label>Reason</label>
+                <div>
+                    <!--<input type="text" name="reason" id="id_reason" value="{{patient.reason}}">-->
+                    <textarea name="reason" id="id_reason" cols="30" rows="10" {{patient.reason}}>{{patient.reason}}</textarea>
+                </div>
+            </div>
+            <div class="post-form">
+                <label>Medicine</label>
+                <div>
+                    <!--<input type="text" name="medicine" id="id_medicine" value="{{patient.medicine}}">-->
+                    <textarea name="medicine" id="id_medicine" cols="30" rows="10" {{patient.medicine}}>{{patient.medicine}}</textarea>
+                </div>
+            </div>
+
+            <button type="submit">prescription added</button>
+            </form>       
+
+    </body>
+</html>

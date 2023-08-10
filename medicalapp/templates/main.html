@@ -1,0 +1,22 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DocXmyopiA</title>
+    </head>
+    <body>
+        <h1>Welcome to DocXmyopiA</h1>
+        
+        <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">submit </button>
+        </form>
+        
+        <style>
+            body{
+                background-color: whitesmoke;
+            }
+        </style>
+    </body>
+</html>

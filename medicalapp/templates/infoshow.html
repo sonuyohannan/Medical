@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>
+            admin@doctorvisit.html
+
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <table class="table">
+            <thead class="thead-dark">
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>contact</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>city</th>
+                <th>state</th>
+                <th>reason</th>
+                <th>medicine</th>
+                <th>Doctors Report</th>
+                <th>Patient Status</th>
+            </thead>
+            <tbody>
+                {% for patient in patient %}
+                <tr >
+                    <td>{{patient.Fname}} </td>
+                    <td>{{patient.Lname}}</td>
+                    <td>{{patient.Age}}</td>
+                    <td>{{patient.sex}}</td>
+                    <td>{{patient.Contact}}</td>
+                    <td>{{patient.Email}}</td>
+                    <td>{{patient.Address}}</td>
+                    <td>{{patient.city}}</td>
+                    <td>{{patient.state}}</td>
+                    <td>{{patient.reason}}</td>
+                    <td>{{patient.medicine}}</td>
+                    <td><strong>{{patient.report}}</strong></td>
+                    <td>{{patient.patient}}</td>
+                    <td>
+                        <span>
+                            <a href="/destroy/{{patient.id}}">Delete</a>
+                        </span>
+                        <a href="/doctorpage/{{patient.id}}"><span class="glyphicon glyphicon-pencil">Doctor</span></a>
+                        <a href="/pharmacypage/{{patient.id}}"><span class="glyphicon glyphicon-pencil">pharmacy</span></a></td>
+                        
+                </tr>
+                {% endfor %}
+  
+            </tbody>
+        </table>
+        <style>
+            
+            
+            table,th,td{
+                border: 1px solid black;
+            }
+        </style>
+    </body>
+    <br>
+    <center>
+    <a href="http://localhost:8000/index0/"><button type="submit">Add New Record</button></a>
+    </center>
+
+    
+</html>

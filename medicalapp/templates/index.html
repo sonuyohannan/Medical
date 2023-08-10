@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>DocHmyiopiA.com
+
+        </title>
+         <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    </head>
+    <body>
+        <style>
+            
+        </style>
+        <div class="split right">
+            <h1>DocHmyopiA</h1>
+
+        </div>
+        
+        
+        
+        <form method="POST" class=""post-form"" action="">
+            {% csrf_token %}
+            <!--{{form.as_p}}-->
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label">First Name</label>
+                <div>
+                    <input type="text" name="Fname" id="id_Fname" value="{{patient.Fname}}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Last Name</label>
+                <div>
+                    <input type="text" name="Lname" id="id_Lname" value="{{patient.Lname}}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Age</label>
+                <div>
+                    <input type="text" name="Age" id="id_Age" value="{{patient.Age}}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Sex</label>
+                <div>
+                    <input type="text" name="sex" id="id_sex" list="icecream" value="{{patient.sex}}">
+                    <datalist id="icecream">
+                        <option value="male"></option>
+                        <option value="female"></option>
+                        <option value="transgender"></option>
+                    </datalist>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Contact</label>
+                <div>
+                    <input type="text" name="Contact" id="id_Contact" value="{{patient.Contact}}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Email</label>
+                <div>
+                    <input type="text" name="Email" id="id_Email" value="{{patient.Email}}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Address</label>
+                <div>
+                    <!--<input type="text" name="Address" id="id_Address" value="{{patient.Address}}">-->
+                    <textarea name="Address" id="id_Address" cols="30" rows="10" {{patient.Address}}></textarea>
+
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label">City</label>
+                <div>
+                    <input type="text" name="city" id="id_city" value="{{patient.city}}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label">State</label>
+                <div>
+                    <input type="text" name="state" id="id_state" value="{{patient.state}}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Reason</label>
+                <div>
+                    <!--<input type="text" name="reason" id="id_reason" value="{{patient.reason}}">-->
+                    <textarea name="reason" id="id_reason" cols="30" rows="10" {{patient.reason}}></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label"><!--Medicine--></label>
+                <div>
+                    <!--<input type="hidden" name="medicine" id="id_medicine" value="{{patient.medicine}}">-->
+                    <!--<textarea  name="medicine" id="id_medicine" cols="30" rows="10" {{patient.medicine}}></textarea>-->
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label"><!--Report--></label>
+                <div>
+                    <!--<input type="hidden" name="report" id="id_report" value="{{patient.report}}">-->
+                    <!--<textarea name="Report" id="id_Report" cols="30" rows="10" {{patient.Report}}></textarea>-->
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label"><!---Patientstatus--></label>
+                <div>
+                    <!--<input type="text" name="tablet" id="id_tablet" value="{{patient.tablet}}">-->
+                    <!--<textarea name="patient" id="id_patient" cols="30" rows="10" {{patient.patient}}></textarea>-->
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label"><!--Tablet Details--></label>
+                <div>
+                    <!--<input type="hidden" name="medicine" id="id_medicine" value="{{patient.medicine}}">-->
+                    <!--<textarea name="tablet" id="id_tablet" cols="30" rows="10" {{patient.tablet}}></textarea>-->
+                </div>
+            </div>
+
+
+            <button type="submit" class="btn btn-dark">submit</button>
+            
+        </form>
+        
+        <footer>
+        
+            <a href="http://localhost:8000/infoshow/">show</a>
+            <center><a href="http://localhost:8000/pharmacyshow/">pharmacyshow menu</a></center>
+        </footer>   
+    </body>
+</html>
